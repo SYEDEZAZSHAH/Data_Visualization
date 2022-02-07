@@ -1,0 +1,5 @@
+shape,X,Y,X1,X2,Y1,Y2,CX,CY,R,RX,RY,Height,Width,Stroke,Fill,Stroke-Width
+circle,,,,,,,45,95,40,,,,,orange,red,7
+rectangle,30,30,,,,,,,,,,40,40,yellow,purple,7
+ellipse,,,,,,,200,200,,40,25,,,red,blue,7
+line,,,200,250,200,280,,,,,,,,blue,orange,7
