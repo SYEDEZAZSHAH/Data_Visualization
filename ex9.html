@@ -1,0 +1,29 @@
+<!doctype html><html><head></head><body>
+	<script src='https://d3js.org/d3.v7.min.js'></script>
+	<p id="output"></p>
+	<p id="demo"></p>
+	<script>
+		let titaniccsv = 'https://raw.githubusercontent.com/dsindy/kaggle-titanic/master/data/test.csv';
+
+  let Male_count = 0,
+    Female_count = 0;
+  var line_count = 0; //end of file checking
+	var total_count = 418;
+  d3.csv(titaniccsv, function(data) {
+
+
+    line_count+= 1;
+    if (data.Sex == 'male') {    //if else condition for male and female
+      Male_count += 1;
+    } else {
+      Female_count = Female_count + 1;
+    }
+    if (line_count == total_count) {
+      d3.select("body").append("p").text('No of Name with Mr:' + Male_count);
+      d3.select("body").append("p").text('No of Name with Mrs:' + Female_count);
+
+    }
+
+  });
+
+	</script><script type="text/javascript"></script></body><html>

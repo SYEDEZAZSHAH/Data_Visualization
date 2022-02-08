@@ -1,0 +1,41 @@
+<!doctype html><html><head></head><body><!DOCTYPE html>
+
+<script src='https://d3js.org/d3.v7.min.js'></script>
+
+<html>
+
+<script>
+	for (var a = 0, n = 10; a < n; a++) {
+
+      var tag = document.createElement("div");
+
+      let text = a;
+
+      tag.id = "div" + a;
+
+      tag.innerHTML = a + 1;
+
+      document.body.appendChild(tag);
+
+      if (a < 5) {
+
+        tag.className = 'red';
+
+      } else {
+        tag.className = 'green';
+      }
+    }
+
+
+
+    d3.selectAll(".red").style('color', 'red');
+
+    d3.selectAll(".green").style('color', 'green');
+//update div to start and update the color  
+    d3.select("#div0").text("start")
+
+    d3.select("#div0").style("color", "purple");
+
+</script>
+
+</html><script type="text/javascript"></script></body><html>

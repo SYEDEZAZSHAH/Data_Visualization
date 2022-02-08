@@ -1,0 +1,24 @@
+<!doctype html><html><head></head><body><script src='https://d3js.org/d3.v7.min.js'></script>
+
+<script>
+	var myData = ['a', 4, 1, 'b', 6, 2, 8, 9, 'z'];
+
+
+  var span = d3.select("body") //span
+    .selectAll("span")
+    .data(myData)
+    .enter()
+    .append('span')
+    .text(function(a, i) {
+      return a;
+    })
+
+    .style("color", function(a, i) {
+      if (a >= 'a' && a <= 'z') { //alphabet is of blue color
+        return "blue";
+      } else {                    //number is of green color
+        return "green";
+      }
+    });
+
+</script><script type="text/javascript"></script></body><html>
